@@ -4,9 +4,7 @@
     <v-header></v-header>
     <!-- 侧滑菜单组件 -->
     <left-panel>
-      <div>
-        <v-menu/>
-      </div>
+      <v-menu/>
     </left-panel>
     <!-- 路由视图 -->
     <el-main>
@@ -42,6 +40,6 @@ export default {
 <style lang="scss" scoped>
 
 .el-main{
-  padding: 10px;
+  padding: 0;
 }
 </style>

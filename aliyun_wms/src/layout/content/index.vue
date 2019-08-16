@@ -32,7 +32,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 #contentView{
-  padding-top: 60px;
+  height:100vh;
+  padding: 70px 10px 10px 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 /*路由动画*/
 .slide-right-enter-active,

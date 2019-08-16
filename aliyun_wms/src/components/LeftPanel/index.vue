@@ -119,7 +119,8 @@ export default {
 	transition: all 0.25s cubic-bezier(0.7, 0.3, 0.1, 1);
 	transform: translate(-100%);
 	background: #fff;
-	z-index: 30;
+  z-index: 30;
+  overflow-y: auto;
 }
 
 .show {
@@ -151,9 +152,10 @@ export default {
 		font-size: 24px;
 		line-height: 48px;
 	}
-	.leftPanel-items {
-		height: 100vh;
-		overflow-y: auto;
-	}
+}
+.leftPanel-items {
+  // height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 60px;
 }
 </style>
