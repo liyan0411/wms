@@ -19,3 +19,8 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## 修改主题
+
+# 1.修改element-variables.scss文件对应的变量
+# 2.执行 et 指令,文件输出到theme文件下
