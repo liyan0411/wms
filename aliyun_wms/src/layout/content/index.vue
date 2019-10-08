@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-	name: "Menu",
+	name: "Content",
 	data () {
 		return {
 			transitionName: '',//路由切换动画
