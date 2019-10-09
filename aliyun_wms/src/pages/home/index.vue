@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     我是首页
-    <div style="height:1000px;"></div>
   </div>
 </template>
 
