@@ -4,6 +4,7 @@
 			class="sidebar-el-menu"
 			:default-active="onRoutes"
 			active-text-color="#7d82c4"
+			@select="selectFun"
 			unique-opened
 			router
 		>
@@ -57,7 +58,7 @@ export default {
 				{ index: "chart", title: "图表", icon: "el-icon-share" },
 				{ index: "list", title: "列表", icon: "el-icon-document" },
 				{ index: "form", title: "表单", icon: "el-icon-setting" },
-				{	index: "sss", title: "二级菜单", icon: "el-icon-setting", subs: [
+				{					index: "sss", title: "二级菜单", icon: "el-icon-setting", subs: [
 						{ index: "1", title: "二级菜单1", icon: "el-icon-document" },
 						{ index: "2", title: "二级菜单2", icon: "el-icon-setting" }
 					]				}
@@ -75,6 +76,12 @@ export default {
 		},
 		handleClose (key, keyPath) {
 			console.log(2, key, keyPath);
+		},
+		selectFun () {
+			this.$store.dispatch('setting/changeSetting', {
+				key: 'isMenu',
+				value: false
+			})
 		}
 	}
 }
@@ -82,7 +89,6 @@ export default {
 <style lang="scss" scoped>
 </style>
 <style lang="scss">
-
 .sidebar-el-menu {
 	> .el-menu-item {
 		font-size: 16px;
@@ -90,16 +96,16 @@ export default {
 			margin: 0 10px !important;
 		}
 	}
-  > .el-submenu {
-		>.el-submenu__title{
-      font-size: 16px!important;
-    }
+	> .el-submenu {
+		> .el-submenu__title {
+			font-size: 16px !important;
+		}
 		i {
 			margin: 0 10px !important;
 		}
-    .el-menu>li{
-      padding-left: 60px!important;
-    }
+		.el-menu > li {
+			padding-left: 60px !important;
+		}
 	}
 }
 </style>
