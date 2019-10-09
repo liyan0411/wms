@@ -1,4 +1,4 @@
-# aliyun_wms
+# xdyun_wms
 
 > A Vue.js project
 
@@ -23,4 +23,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## 修改主题
 
 # 1.修改element-variables.scss文件对应的变量
-# 2.执行 et 指令,文件输出到theme文件下
+# 2.执行 et -o src/theme 指令,文件输出到src/theme文件下

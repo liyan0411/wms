@@ -41,6 +41,36 @@ const router = new Router({
           meta: {
             title: '首页'
           }
+        },
+        {
+          path: '/chart',
+          name: 'chart',
+          component: resolve => {
+            require(['@/pages/chart/chart'], resolve)
+          },
+          meta: {
+            title: '图表'
+          }
+        },
+        {
+          path: '/list',
+          name: 'list',
+          component: resolve => {
+            require(['@/pages/list/list'], resolve)
+          },
+          meta: {
+            title: '列表'
+          }
+        },
+        {
+          path: '/form',
+          name: 'form',
+          component: resolve => {
+            require(['@/pages/form/form'], resolve)
+          },
+          meta: {
+            title: '表单'
+          }
         }
       ]
     },
