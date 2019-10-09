@@ -1,90 +1,10 @@
-
 /**
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  * 组件间传值  所用实例化
  */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video,
-input {
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -93,19 +13,9 @@ input {
   vertical-align: baseline;
 }
 
-
 /* HTML5 display-role reset for older browsers */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-menu,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
 
@@ -114,27 +24,20 @@ body {
   font-size: 14px;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
-
 
 .user-info span em i {
   font-style: normal;
   margin-right: 0;
 }
 
-.user-info span em i:nth-of-type(3),
-.user-info span i {
+.user-info span em i:nth-of-type(3), .user-info span i {
   margin-right: 8px;
 }
 
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 
@@ -142,7 +45,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 
 /* custom */
 
@@ -178,8 +80,7 @@ li {
   -webkit-border-radius: 6px;
 }
 
-html,
-body {
+html, body {
   width: 100%;
 }
 
@@ -188,19 +89,13 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html,
-body,
-#app {
+html, body, #app {
   height: 100%;
 }
 
-
 /* IE7 */
 
-input:focus,
-a:focus,
-button:focus,
-textarea:focus {
+input:focus, a:focus, button:focus, textarea:focus {
   outline: none
 }
 
@@ -217,8 +112,8 @@ textarea:focus {
 }
 
 /*去除input number 上下箭头*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
