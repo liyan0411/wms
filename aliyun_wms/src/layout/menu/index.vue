@@ -101,11 +101,20 @@ export default {
 			font-size: 16px !important;
 		}
 		i {
-			margin: 0 10px !important;
+      margin: 0 10px !important;
+      line-height: 15px!important;
 		}
 		.el-menu > li {
 			padding-left: 60px !important;
-		}
-	}
+    }
+    .el-submenu__icon-arrow{
+      top:0!important;
+      line-height: 56px!important;
+    }
+  }
+  .el-menu-item.is-active{
+    background: #5868D9!important;
+    color:#fff!important;
+  }
 }
 </style>

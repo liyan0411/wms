@@ -33,8 +33,8 @@ export default {
 <style lang="scss" scoped>
 #contentView{
   height:100vh;
-  background: #f9f9f9;
-  padding: 70px 10px 10px 10px;
+  background: #F4F6FD;
+  padding: 80px 20px 20px 20px;
   box-sizing: border-box;
   overflow-y: auto;
 }
