@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="headers">
 		<el-header class="app-header" height="60px">
 			<i class="el-icon-menu pointer" @click="show = !show"></i>
 
