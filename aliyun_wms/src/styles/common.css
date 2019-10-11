@@ -125,6 +125,134 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.container{
+.container {
   padding: 20px;
+}
+
+.div-search {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.div-search .el-col {
+  margin-bottom: 10px;
+}
+
+.div-search .el-row .el-col>span {
+  float: left;
+  line-height: 40px;
+  width: 104px;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #6c6c6c;
+}
+
+.div-search .el-row .el-col>:nth-child(2) {
+  float: left;
+  width: 60%;
+  height: 40px;
+}
+
+.div-search .el-input--small .el-input__inner, .div-search .el-range-editor--small .el-range-separator {
+  height: 40px;
+  line-height: 40px;
+}
+
+.btn-view .el-button {
+  width: 100px;
+  height: 36px;
+  border-radius: 18px;
+}
+
+.div-btn {
+  overflow: hidden;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*表头td*/
+
+.el-table th {
+  padding: 10px 0px;
+  text-align: center;
+  color: #000;
+}
+
+.sm-table th {
+  padding: 5px 0px;
+  text-align: center;
+  color: #333;
+  font-size: 12px
+}
+
+.el-table td {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.sm-table td {
+  padding: 5px 0px;
+}
+
+.el-table th, .el-table thead tr {
+  background-color: #FAFAFA;
+}
+
+.el-table td, .el-table th.is-leaf {
+  border-bottom: 5px solid #fff;
+  font-size: 14px;
+  color: #333333;
+}
+
+.el-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.el-table tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.el-table th, .el-table thead tr {
+  background: #f0f1f9;
+}
+
+.el-table__footer-wrapper tbody td {
+  border-top: 1px solid #979797;
+  ;
+}
+
+.el-table--enable-row-transition .el-table__body tr:nth-child(odd) td {
+  background: #FCFCFC;
+}
+
+.el-table--enable-row-transition .el-table__body tr:nth-child(even) td {
+  background: #F8F9FC;
+}
+
+/*表格复选框背景色以及边框色    开始*/
+
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #7986E1;
+  border: 1px solid #7986e1;
+}
+
+.el-checkbox__input .el-checkbox__inner {
+  border: 2px solid #7986e1;
+}
+
+.el-checkbox__inner:hover {
+  border-color: #7986E1;
+}
+
+.el-checkbox__input:hover {
+  border-color: #7986E1;
+}
+
+.el-table::before {
+  height: 0;
+}
+
+.div-page{
+  padding: 20px 0;
+  text-align:center;
 }
