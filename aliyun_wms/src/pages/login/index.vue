@@ -235,22 +235,28 @@ export default {
 }
 </style>
 <style lang="scss">
-.el-input__inner {
-	background: #ffffff;
-	border: none !important;
-	border-bottom: 1px solid #e0e0e0 !important;
-	border-radius: 0 !important;
-	padding: 0 24px !important;
-	font-size: 14px !important;
-	color: #666666 !important;
-}
-.el-form-item.is-error .el-input__inner,
-.el-form-item.is-error .el-input__inner:focus,
-.el-form-item.is-error .el-textarea__inner,
-.el-form-item.is-error .el-textarea__inner:focus {
-	border-color: #f56c6c !important;
-}
-.el-input__inner:focus {
-	border-color: #7378f0 !important;
+.login-box {
+	.el-input__inner {
+		background: #ffffff;
+		border: none !important;
+		border-bottom: 1px solid #e0e0e0 !important;
+		border-radius: 0 !important;
+		padding: 0 24px !important;
+		font-size: 14px !important;
+		color: #666666 !important;
+	}
+	.el-form-item.is-error .el-input__inner,
+	.el-form-item.is-error .el-input__inner:focus,
+	.el-form-item.is-error .el-textarea__inner,
+	.el-form-item.is-error .el-textarea__inner:focus {
+		border-color: #f56c6c !important;
+	}
+	.el-input__inner:focus {
+		border-color: #7378f0 !important;
+	}
+	.el-input--small .el-input__inner {
+		font-family: PingFangSC-Regular;
+		color: #666666 !important;
+	}
 }
 </style>
