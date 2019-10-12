@@ -99,20 +99,12 @@ export default {
 				},
 				yAxis: {
 					type: 'value'
-				},
+        },
+        color: ['#7378f0'],
 				series: [{
 					data: [120, 200, 150, 80, 70, 110, 130],
-          type: 'bar',
-          itemStyle: {
-						//通常情况下：
-						normal: {
-							//每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
-							color: function (params) {
-								var colorList = ['#7a65f2']; //每根柱子的颜色
-								return colorList[params.dataIndex];
-							}
-						}
-					}
+          type: 'bar'
+					// }
 				}]
 			};
 			chartmainbar.setOption(option);
