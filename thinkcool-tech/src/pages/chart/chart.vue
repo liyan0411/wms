@@ -3,7 +3,7 @@
 		<div class="data">
 			<h3 class="title">统计数据</h3>
 			<div class="content">
-				<el-row :gutter="20">
+				<el-row :gutter="26">
 					<el-col :span="6">
 						<div class="grid-content bg-purple">
 							<h4>业务内容1</h4>
@@ -42,7 +42,7 @@
 		<div class="describe">
 			<h3 class="title">统计图表</h3>
 			<div class="content">
-				<el-row :gutter="20">
+				<el-row :gutter="26">
 					<el-col :span="5">
 						<div class="grid-content bg-purple">
 							<h4>饼图标题</h4>
