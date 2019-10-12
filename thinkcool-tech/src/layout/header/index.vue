@@ -300,7 +300,7 @@ export default {
 				}
 				.logos {
 					height: 40px;
-					margin: 10px 0;
+					margin: 10px;
 				}
 				.searchs {
 					float: right;

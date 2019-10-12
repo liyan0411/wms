@@ -13,7 +13,8 @@ import './router/permission' // permission control
 import 'babel-polyfill'
 import api from '@/utils/common.js'
 import '@/styles/common.css'
-
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts //将echarts存到Vue原型中
 // 常用公共方法封装 添加到prototype
 Vue.prototype.$api = api
 // elementUI 配置

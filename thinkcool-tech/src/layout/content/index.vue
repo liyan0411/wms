@@ -1,10 +1,10 @@
 <template>
 	<div id="contentView">
 		<!-- 路由动画载体 -->
-		<transition :name="transitionName">
+		<!-- <transition :name="transitionName"> -->
 			<!-- 路由视图 -->
 			<router-view></router-view>
-		</transition>
+		<!-- </transition> -->
 	</div>
 </template>
 <script>
@@ -20,47 +20,49 @@ export default {
 			// 跳转后使视图滚动条 置顶
 			document.getElementById("contentView").scrollTop = 0;
 			//如果to索引大于from索引,判断为前进状态,反之则为后退状态
-			if (to.meta.index > from.meta.index) {
-				//设置动画名称
-				this.transitionName = 'slide-left';
-			} else {
-				this.transitionName = 'slide-right';
-			}
+			// if (to.meta.index > from.meta.index) {
+			// 	//设置动画名称
+			// 	this.transitionName = 'slide-left';
+			// } else {
+			// 	this.transitionName = 'slide-right';
+			// }
 		}
 	}
 }
 </script>
 <style lang="scss" scoped>
 #contentView{
+  width:100%;
   height:100vh;
+  box-sizing: border-box;
   background: #F4F6FD;
   padding: 80px 20px 20px 20px;
   box-sizing: border-box;
   overflow-y: auto;
 }
-/*路由动画*/
-.slide-right-enter-active,
-.slide-right-leave-active,
-.slide-left-enter-active,
-.slide-left-leave-active {
-	will-change: transform;
-	transition: all 300ms;
-	position: absolute;
-}
-.slide-right-enter {
-	opacity: 0;
-	/*transform: translate3d(-100%, 0, 0);*/
-}
-.slide-right-leave-active {
-	opacity: 0;
-	/*transform: translate3d(100%, 0, 0);*/
-}
-.slide-left-enter {
-	opacity: 1;
-	/*transform: translate3d(100%, 0, 0);*/
-}
-.slide-left-leave-active {
-	opacity: 1;
-	/*transform: translate3d(-100%, 0, 0);*/
-}
+// /*路由动画*/
+// .slide-right-enter-active,
+// .slide-right-leave-active,
+// .slide-left-enter-active,
+// .slide-left-leave-active {
+// 	will-change: transform;
+// 	transition: all 300ms;
+// 	position: absolute;
+// }
+// .slide-right-enter {
+// 	opacity: 0;
+// 	/*transform: translate3d(-100%, 0, 0);*/
+// }
+// .slide-right-leave-active {
+// 	opacity: 0;
+// 	/*transform: translate3d(100%, 0, 0);*/
+// }
+// .slide-left-enter {
+// 	opacity: 1;
+// 	/*transform: translate3d(100%, 0, 0);*/
+// }
+// .slide-left-leave-active {
+// 	opacity: 1;
+// 	/*transform: translate3d(-100%, 0, 0);*/
+// }
 </style>
