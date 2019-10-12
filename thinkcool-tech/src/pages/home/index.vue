@@ -98,7 +98,17 @@ import '../../theme/color-picker.css';
           <div class="wrapper-warning mb-26">
             <div class="wrapper-warning-header">
               <span>告警通知</span>
-              <span class="day-num"><span>20天</span> <i class="el-icon-arrow-down"></i></span>
+              <span class="day-num">
+                <el-dropdown trigger="click" @command="handleCommand1">
+                  <span class="el-dropdown-link">{{ warningDayNum + '天' }}<i class="el-icon-arrow-down el-icon--right"></i>
+                  </span>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item command='7'>7天</el-dropdown-item>
+                    <el-dropdown-item command='20'>20天</el-dropdown-item>
+                    <el-dropdown-item command='30'>30天</el-dropdown-item>
+                  </el-dropdown-menu>
+                </el-dropdown>
+              </span>
             </div>
             <div class="wrapper-warning-body" v-html="warningNum"></div>
             <div class="wrapper-warning-footer">
@@ -109,7 +119,17 @@ import '../../theme/color-picker.css';
           <div class="wrapper mb-26">
             <div class="wrapper-header">
               <span>行业快报</span>
-              <span class="day-num"><span>20天</span> <i class="el-icon-arrow-down"></i></span>
+              <span class="day-num">
+                <el-dropdown trigger="click" @command="handleCommand2">
+                  <span class="el-dropdown-link">{{ newsDayNum + '天' }}<i class="el-icon-arrow-down el-icon--right"></i>
+                  </span>
+                  <el-dropdown-menu slot="dropdown">
+                    <el-dropdown-item command='7'>7天</el-dropdown-item>
+                    <el-dropdown-item command='20'>20天</el-dropdown-item>
+                    <el-dropdown-item command='30'>30天</el-dropdown-item>
+                  </el-dropdown-menu>
+                </el-dropdown>
+              </span>
             </div>
             <div class="wrapper-body">
               <div class="news-list">
@@ -189,7 +209,9 @@ export default {
           date: '2019/3',
           value: '上海物流库存不足上海物流库存不足上海物流库存不足上海物流库存不足'
         }
-      ]
+      ],
+      warningDayNum: '7',
+      newsDayNum: '7'
     };
   },
   mounted() {
@@ -197,6 +219,16 @@ export default {
     this.drawLine()
   },
   methods: {
+    // 选择报警通知天数
+    handleCommand1(command) {
+      console.log(command)
+      this.warningDayNum = command
+    },
+    // 选择行业快报天数
+    handleCommand2(command) {
+      console.log(command)
+      this.newsDayNum = command
+    },
     // 柱状图
 		drawLine () {
 			let chartmainbar = this.$echarts.init(document.getElementById("chartmainbar"));
@@ -350,13 +382,14 @@ export default {
         .day-num {
           font-size: 14px;
           color: #666666;
+          cursor: pointer;
         }
       }
       .news-list {
         font-size: 14px;
         color: #666666;
         padding: 20px;
-        max-height: 95px;
+        max-height: 150px;
         overflow-y: scroll;
         &::-webkit-scrollbar {
           display: none;
@@ -370,7 +403,7 @@ export default {
             width: 50px;
           }
           .text {
-            padding-right: 5px;
+            padding-left: 20px;
             box-sizing: border-box;
             text-align: right;
             flex: 1;
@@ -408,6 +441,7 @@ export default {
         color: #666666;
         border-bottom: 1px solid #ececec;
         .day-num {
+          cursor: pointer;
           font-size: 14px;
           color: #666666;
         }
