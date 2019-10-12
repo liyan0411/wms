@@ -9,7 +9,7 @@
 				</el-col>
 				<el-col :xs="24" :sm="12" :md="8" :lg="6" :xl="6">
 					<span>出发地</span>
-					<el-select placeholder="请选择" v-model="form.location">
+					<el-select placeholder="请选择" v-model="form.location" clearable>
 						<el-option
 							v-for="item in options"
 							:key="item.value"
@@ -29,6 +29,7 @@
 						end-placeholder="结束日期"
 						format="yyyy-MM-dd"
 						value-format="yyyy-MM-dd"
+						clearable
 					>
 					</el-date-picker>
 				</el-col>
@@ -61,7 +62,12 @@
 			></Button>
 		</div>
 		<div class="div-table">
-			<el-table :data="tableData" style="width: 100%">
+			<el-table
+				:data="tableData"
+				ref="multipleTable"
+				@selection-change="handleSelectionChange"
+				@row-click="toggleSelection"
+			>
 				<el-table-column type="selection" width="55"> </el-table-column>
 				<el-table-column prop="date" label="日期" width="180">
 				</el-table-column>
@@ -112,7 +118,7 @@ export default {
 	},
 	data () {
 		return {
-      currentPage:1,
+			currentPage: 1,
 			dialogFormVisible: false,
 			add: {
 				text: "新增",
@@ -172,20 +178,25 @@ export default {
 			forms: {
 				name: "",
 				region: ""
-			}
+      },
+      // 保存选中的列表数据
+			selList: []
 		}
 	},
 	methods: {
-          handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
-      },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      },
+		handleSizeChange (val) {
+			console.log(`每页 ${val} 条`);
+		},
+		handleCurrentChange (val) {
+			console.log(`当前页: ${val}`);
+		},
 		query () {
 			console.log("query", this.form)
 		},
 		reset () {
+			this.form.name = "";
+			this.form.location = "";
+			this.form.date = "";
 			console.log("reset", this.form)
 		},
 		addClick () {
@@ -193,7 +204,7 @@ export default {
 			this.dialogFormVisible = true;
 		},
 		editClick () {
-			console.log("编辑")
+			console.log("编辑",this.selList)
 		},
 		delClick () {
 			console.log("删除")
@@ -201,7 +212,25 @@ export default {
 		affirm () {
 			console.log(this.forms)
 			this.dialogFormVisible = false;
-		}
+		},
+
+		// 点击复选框获取当前行数据
+		handleSelectionChange (val) {
+			var self = this;
+			self.selList = val;
+		},
+		// 点击行选中复选框
+		toggleSelection (row) {
+			var rows = [];
+			rows.push(row);
+			if (rows) {
+				rows.forEach(row => {
+					this.$refs.multipleTable.toggleRowSelection(row);
+				});
+			} else {
+				this.$refs.multipleTable.clearSelection();
+			}
+		},
 	},
 }
 </script>

@@ -36,6 +36,7 @@
 							<el-input
 								v-model="login.password"
 								placeholder="请输入"
+                type="password"
 								@focus="focusFun('password')"
 							>
 							</el-input>

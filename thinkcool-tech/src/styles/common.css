@@ -257,6 +257,10 @@ input[type="number"] {
   text-align: center;
 }
 
-.el-dialog__body{
+.el-dialog__body {
   padding: 10px;
+}
+
+.btn-modal{
+  text-align: center;
 }
