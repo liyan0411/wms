@@ -79,13 +79,13 @@ import '../../theme/color-picker.css';
               <el-col class="mb-20" :span="12">
                 <!-- 折线图 -->
                 <div class="chart-bg">
-    							<div id="chartmainline" style="width:100%; height:200px;"></div>              
+    							<div id="chartmainline" style="width:100%; height:400px;"></div>              
                 </div>
               </el-col>
               <el-col class="mb-20" :span="12">
                 <!-- 柱状图 -->
                 <div class="chart-bg">
-    							<div id="chartmainbar" style="width:100%; height:200px;"></div>
+    							<div id="chartmainbar" style="width:100%; height:400px;"></div>
                 </div>
               </el-col>
             </el-row>
@@ -458,7 +458,7 @@ export default {
     background: #FFFFFF;
     box-shadow: 0 2px 16px 0 rgba(163,168,179,0.14);
     border-radius: 12px;
-    height: 80px;
+    height: 100px;
     &::after {
       position: absolute;
       content: '';
@@ -488,7 +488,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 100px;
     background: #FFFFFF;
     box-shadow: 0 2px 16px 0 rgba(163,168,179,0.14);
     border-radius: 12px;
