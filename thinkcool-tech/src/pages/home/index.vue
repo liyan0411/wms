@@ -78,13 +78,13 @@ import '../../theme/color-picker.css';
             <el-row :gutter="30">
               <el-col class="mb-20" :span="12">
                 <!-- 折线图 -->
-                <div>
+                <div class="chart-bg">
     							<div id="chartmainline" style="width:100%; height:200px;"></div>              
                 </div>
               </el-col>
               <el-col class="mb-20" :span="12">
                 <!-- 柱状图 -->
-                <div>
+                <div class="chart-bg">
     							<div id="chartmainbar" style="width:100%; height:200px;"></div>
                 </div>
               </el-col>
@@ -476,6 +476,12 @@ export default {
     .text {
       margin-bottom: 6px;
     }
+  }
+  .chart-bg {
+    background: #FFFFFF;
+    box-shadow: 0 2px 16px 0 rgba(163,168,179,0.14);
+    border-radius: 12px;
+    padding: 10px 0;
   }
 }
 </style>
