@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import {EleResize} from "@/utils/index.js"
+import { EleResize } from "@/utils/index.js"
 export default {
 	name: 'Chart',
 	data () {
@@ -98,12 +98,17 @@ export default {
 					data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 				},
 				yAxis: {
+					name: "数量",
 					type: 'value'
-        },
-        color: ['#7378f0'],
+				},
+				tooltip: {
+					trigger: 'item',
+					formatter: "{b} : {c}"
+				},
+				color: ['#7378f0'],
 				series: [{
 					data: [120, 200, 150, 80, 70, 110, 130],
-          type: 'bar'
+					type: 'bar'
 					// }
 				}]
 			};
@@ -147,6 +152,7 @@ export default {
 				],
 				yAxis: [
 					{
+						name: "数量",
 						type: 'value'
 					}
 				],
@@ -349,7 +355,7 @@ export default {
 		border-radius: 12px;
 	}
 	.grid-content {
-    width:100%;
+		width: 100%;
 		border-radius: 4px;
 		min-height: 36px;
 	}

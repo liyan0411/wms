@@ -184,7 +184,7 @@ export default {
 			height: 700px;
 			float: right;
 			.title h2 {
-				font-size: 26px;
+				font-size: 30px;
 				color: #51539f;
 				text-align: center;
 				letter-spacing: 0.67px;
