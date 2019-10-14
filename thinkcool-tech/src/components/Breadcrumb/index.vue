@@ -2,7 +2,7 @@
   <div class="breadcrumbs">
 
 		<el-breadcrumb separator="/">
-			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
+			<el-breadcrumb-item :to="{ path: '/home' }"><i class="el-icon-info"></i> 首页</el-breadcrumb-item>
 			<el-breadcrumb-item>{{name}}</el-breadcrumb-item>
 		</el-breadcrumb>
   </div>

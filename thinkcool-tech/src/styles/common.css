@@ -229,6 +229,10 @@ input[type="number"] {
   background: #F8F9FC;
 }
 
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background-color: #f0f1f9 !important;
+}
+
 /*表格复选框背景色以及边框色    开始*/
 
 .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
@@ -261,6 +265,6 @@ input[type="number"] {
   padding: 10px;
 }
 
-.btn-modal{
+.btn-modal {
   text-align: center;
 }

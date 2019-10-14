@@ -41,7 +41,7 @@
 				<template v-else>
 					<el-menu-item :index="item.index" :key="item.index">
 						<i :class="item.icon"></i>
-            <span slot="title">{{ item.title }}</span>
+						<span slot="title">{{ item.title }}</span>
 					</el-menu-item>
 				</template>
 			</template>
@@ -95,6 +95,8 @@ export default {
 .sidebar-el-menu {
 	> .el-menu-item {
 		font-size: 16px;
+		height: 45px;
+		line-height: 45px;
 		i {
 			margin: 0 10px !important;
 		}
@@ -102,6 +104,12 @@ export default {
 	> .el-submenu {
 		> .el-submenu__title {
 			font-size: 16px !important;
+			height: 45px;
+			line-height: 45px;
+		}
+		.el-menu-item {
+			height: 45px;
+			line-height: 45px;
 		}
 		i {
 			margin: 0 10px !important;
@@ -112,7 +120,7 @@ export default {
 		}
 		.el-submenu__icon-arrow {
 			top: 0 !important;
-			line-height: 56px !important;
+			line-height: 45px !important;
 		}
 	}
 	.el-menu-item.is-active {

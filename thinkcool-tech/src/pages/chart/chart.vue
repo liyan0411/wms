@@ -105,7 +105,7 @@ export default {
 					trigger: 'item',
 					formatter: "{b} : {c}"
 				},
-				color: ['#7378f0'],
+				// color: ['#7378f0'],
 				series: [{
 					data: [120, 200, 150, 80, 70, 110, 130],
 					type: 'bar'
@@ -207,49 +207,70 @@ export default {
 			})
 
 		},
-		// 饼图
+		// 环形图
 		pie () {
 			let chartmainpie = this.$echarts.init(document.getElementById("chartmainpie"));
 			let option = {
-				// title: {
-				// 	text: '天气情况统计',
-				// 	left: 'center'
-				// },
-				// color: ['#6dd8da', '#b6a2de', '#58afed'],
 				tooltip: {
 					trigger: 'item',
-					formatter: "{a} <br/>{b} : {c} ({d}%)"
-				},
+					formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        // color:['red'],
 				legend: {
-					// orient: 'vertical',
-					// top: 'middle',
-					bottom: 10,
-					left: 'center',
-					data: ['西凉', '益州', '兖州', '荆州', '幽州']
+					x: 'center',
+					y: 'bottom',
+					position: 'center',
+					data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
 				},
+				graphic: [{ //环形图中间添加文字
+					type: 'text', //通过不同top值可以设置上下显示
+					left: 'center',
+					top: '45%',
+					style: {
+						text: '环图中添加内容' + '\n' + '和数据',
+						textAlign: 'center',
+						fill: '#7378F0', //文字的颜色
+						width: 30,
+						height: 30,
+						fontSize: 20,
+						fontFamily: "Microsoft YaHei"
+					}
+				}],
 				series: [
 					{
+						name: '访问来源',
 						type: 'pie',
-						radius: '65%',
-						center: ['50%', '50%'],
-						selectedMode: 'single',
-						data: [
-							{ value: 1548, name: '幽州' },
-							{ value: 535, name: '荆州' },
-							{ value: 510, name: '兖州' },
-							{ value: 634, name: '益州' },
-							{ value: 735, name: '西凉' }
-						],
-						itemStyle: {
+						radius: ['50%', '70%'],
+						avoidLabelOverlap: false,
+						label: {
+							normal: {
+								show: false,
+								position: 'center'
+							},
 							emphasis: {
-								shadowBlur: 10,
-								shadowOffsetX: 0,
-								shadowColor: 'rgba(0, 0, 0, 0.5)'
+								show: false,
+								textStyle: {
+									fontSize: '30',
+									fontWeight: 'bold'
+								}
 							}
-						}
+						},
+						labelLine: {
+							normal: {
+								show: false
+							}
+						},
+						data: [
+							{ value: 335, name: '直接访问' },
+							{ value: 310, name: '邮件营销' },
+							{ value: 234, name: '联盟广告' },
+							{ value: 135, name: '视频广告' },
+							{ value: 1548, name: '搜索引擎' }
+						]
 					}
 				]
 			};
+
 			chartmainpie.setOption(option);
 			// 元素发送变化后 调用resize 方法
 			EleResize.on(document.getElementById("chartmainpie"), () => {
@@ -318,7 +339,7 @@ export default {
 	color: #666666;
 	letter-spacing: 0;
 	border-bottom: 1px solid #d8d8d8;
-	padding: 15px 0;
+	padding: 0 0 12px 0;
 	position: relative;
 	&:after {
 		content: "";
