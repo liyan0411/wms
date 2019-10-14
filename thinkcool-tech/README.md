@@ -22,14 +22,16 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## 修改主题
 
-# 1.修改element-variables.scss文件对应的变量
-# 2.执行 et -o src/theme 指令,文件输出到src/theme文件下
+``` bash
+1.修改element-variables.scss文件对应的变量
 
+2.执行 et -o src/theme 指令,文件输出到src/theme文件下
+```
 
 ## 项目简介：
 
 ``` bash
-1.主要技术栈vue+elementUI
+1.主要技术栈vue+elementUI+axios
 
 2.图表使用echarts,使用规则可参考官网api文档
 
