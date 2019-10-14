@@ -1,3 +1,5 @@
+// 引入拦截处理后的 axios
+import request from './request'
 // 自定义判断元素类型JS
 function toType(obj) {
   return {}.toString
@@ -15,6 +17,22 @@ function sGetObject(k) {
 
 // 返回在vue模板中的调用接口
 export default {
+  post: function(url, data = {}) {
+    return request({
+      url,
+      method: 'post',
+      data
+    })
+  },
+
+  // get 请求
+  get: function(url, params = {}) {
+    return request({
+      url,
+      method: 'get',
+      params
+    })
+  },
   sSetObject: function(k, v) {
     try {
       sessionStorage.setItem(k, JSON.stringify(v))

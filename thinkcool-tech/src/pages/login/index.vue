@@ -107,7 +107,12 @@ export default {
 			console.log(self.login)
 			this.$refs[formName].validate((valid) => {
 				if (valid) {
-
+          // self.$api.post("sys/login",{
+          //   username:self.login.name,
+          //   password:self.login.password
+          // }).then(r=>{
+          //   console.log(r)
+          // })
 					self.$router.push("/home");
 				} else {
 					console.log('error submit!!');
