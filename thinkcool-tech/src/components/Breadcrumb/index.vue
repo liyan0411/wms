@@ -22,6 +22,6 @@ export default {
 </script>
 <style lang="scss" scoped>
   .breadcrumbs{
-    margin-bottom: 20px;
+    margin: 10px 0;
   }
 </style>

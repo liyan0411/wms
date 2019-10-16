@@ -2,7 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-
+/**
+ * 字段说明
+ * title：页面标题
+ * noPath：true不显示面包屑 false显示
+ */
 const router = new Router({
   // mode: 'history',
   routes: [
@@ -39,6 +43,7 @@ const router = new Router({
             require(['@/pages/home'], resolve)
           },
           meta: {
+            noPath: true,
             title: '首页'
           }
         },
@@ -49,6 +54,7 @@ const router = new Router({
             require(['@/pages/chart/chart'], resolve)
           },
           meta: {
+            noPath: true,
             title: '图表'
           }
         },

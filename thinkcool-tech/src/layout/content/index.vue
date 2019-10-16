@@ -2,14 +2,19 @@
 	<div id="contentView">
 		<!-- 路由动画载体 -->
 		<!-- <transition :name="transitionName"> -->
+		<Breadcrumbs v-show="!$route.meta.noPath" :name="$route.meta.title" />
 			<!-- 路由视图 -->
 			<router-view></router-view>
 		<!-- </transition> -->
 	</div>
 </template>
 <script>
+import Breadcrumbs from "@/components/Breadcrumb"
 export default {
 	name: "Content",
+	components: {
+		Breadcrumbs
+	},
 	data () {
 		return {
 			transitionName: '',//路由切换动画
@@ -36,7 +41,7 @@ export default {
   height:100vh;
   box-sizing: border-box;
   background: #F4F6FD;
-  padding: 80px 20px 20px 20px;
+  padding: 60px 20px 20px 20px;
   box-sizing: border-box;
   overflow-y: auto;
 }

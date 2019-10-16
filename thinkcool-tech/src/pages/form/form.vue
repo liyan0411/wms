@@ -1,6 +1,5 @@
 <template>
 	<div class="container">
-		<Breadcrumbs :name="'表单'" />
 		<div class="from">
 			<el-form ref="form" :model="form" label-width="80px">
 				<el-form-item label="单行文本">
@@ -21,7 +20,11 @@
 					</el-cascader>
 				</el-form-item>
 				<el-form-item label="日期">
-					<el-date-picker v-model="form.date" type="date" placeholder="选择日期">
+					<el-date-picker
+						v-model="form.date"
+						type="date"
+						placeholder="选择日期"
+					>
 					</el-date-picker>
 				</el-form-item>
 				<el-form-item label="日期范围">
@@ -71,7 +74,11 @@
 					</el-radio-group>
 				</el-form-item>
 				<el-form-item label="多行文本">
-					<el-input type="textarea" v-model="form.desc" placeholder="请输入"></el-input>
+					<el-input
+						type="textarea"
+						v-model="form.desc"
+						placeholder="请输入"
+					></el-input>
 				</el-form-item>
 				<el-form-item>
 					<el-button type="primary" @click="onSubmit">立即创建</el-button>
@@ -83,21 +90,17 @@
 </template>
 
 <script>
-import Breadcrumbs from "@/components/Breadcrumb"
 export default {
 	name: 'Form',
-	components: {
-		Breadcrumbs
-	},
 	data () {
 		return {
 
 			form: {
 				name: '',
-        region: '',
-        selectedOptions:'',
-        date:'',
-        dates:'',
+				region: '',
+				selectedOptions: '',
+				date: '',
+				dates: '',
 				date1: '',
 				date2: '',
 				delivery: false,
@@ -304,11 +307,11 @@ export default {
 	},
 	methods: {
 		onSubmit () {
-			console.log('submit!',this.form);
+			console.log('submit!', this.form);
 		},
-      handleChange(value) {
-        console.log(value);
-      }
+		handleChange (value) {
+			console.log(value);
+		}
 	}
 }
 </script>
