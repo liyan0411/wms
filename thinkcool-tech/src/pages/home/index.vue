@@ -79,12 +79,14 @@ import '../../theme/color-picker.css';
               <el-col class="mb-20" :span="12">
                 <!-- 折线图 -->
                 <div class="chart-bg">
+    							<h4>折线图标题</h4>
     							<div id="chartmainline" style="width:100%; height:400px;"></div>              
                 </div>
               </el-col>
               <el-col class="mb-20" :span="12">
                 <!-- 柱状图 -->
                 <div class="chart-bg">
+							    <h4>柱状图标题</h4>
     							<div id="chartmainbar" style="width:100%; height:400px;"></div>
                 </div>
               </el-col>
@@ -540,6 +542,13 @@ export default {
     box-shadow: 0 2px 16px 0 rgba(163,168,179,0.14);
     border-radius: 12px;
     padding: 10px 0;
+    h4 {
+      font-family: PingFangSC-Medium;
+      font-size: 16px;
+      color: #666666;
+      letter-spacing: 0;
+      padding: 15px;
+    }
   }
 }
 </style>
