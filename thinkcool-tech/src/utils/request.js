@@ -86,7 +86,7 @@ service.interceptors.response.use(
 		if (response.status === 200) {
 			// 根据后端响应状态码 处理请求
 			loadinginstace.close();
-
+      return Promise.resolve(res)
 		} else {
 			loadinginstace.close()
 			return Promise.reject(res);
