@@ -1,5 +1,6 @@
 // 引入拦截处理后的 axios
 import request from './request'
+import { Message } from 'element-ui'
 // 自定义判断元素类型JS
 function toType(obj) {
   return {}.toString
@@ -31,6 +32,30 @@ export default {
       url,
       method: 'get',
       params
+    })
+  },
+  // 文件上传
+  apiUl: function(url, file, data = {}) {
+    // 参数为formData 格式
+    var fd = new FormData()
+    if (data != null && data !== undefined) {
+      for (var i = 0; i < data.length; i++) {
+        fd.append(data[i].name, data[i].value)
+      }
+    }
+    if (file != null) {
+      fd.append('file', file)
+    } else {
+      Message.warning('请选择文件！')
+      return
+    }
+    return request({
+      url,
+      method: 'post',
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      },
+      data: fd
     })
   },
   sSetObject: function(k, v) {
