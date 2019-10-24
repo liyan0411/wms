@@ -6,6 +6,7 @@ Vue.use(Router)
  * 字段说明
  * title：页面标题
  * noPath：true不显示面包屑 false显示
+ * isMenus:true 显示二级菜单 false 不显示二级菜单
  */
 const router = new Router({
   // mode: 'history',
@@ -44,6 +45,7 @@ const router = new Router({
           },
           meta: {
             noPath: true,
+            isMenus: true,
             title: '首页'
           }
         },
@@ -55,6 +57,7 @@ const router = new Router({
           },
           meta: {
             noPath: true,
+            isMenus: true,
             title: '图表'
           }
         },
@@ -75,7 +78,41 @@ const router = new Router({
             require(['@/pages/form/form'], resolve)
           },
           meta: {
+            isMenus: true,
             title: '表单'
+          }
+        },
+        {
+          path: '/index1',
+          name: 'index1',
+          component: resolve => {
+            require(['@/pages/menuChild/index1'], resolve)
+          },
+          meta: {
+            isMenus: true,
+            title: '子菜单1'
+          }
+        },
+        {
+          path: '/index2',
+          name: 'index2',
+          component: resolve => {
+            require(['@/pages/menuChild/index2'], resolve)
+          },
+          meta: {
+            isMenus: true,
+            title: '子菜单2'
+          }
+        },
+        {
+          path: '/index3',
+          name: 'index3',
+          component: resolve => {
+            require(['@/pages/menuChild/index3'], resolve)
+          },
+          meta: {
+            isMenus: true,
+            title: '子菜单3'
           }
         }
       ]
