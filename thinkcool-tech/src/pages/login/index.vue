@@ -136,7 +136,8 @@ export default {
 				}
 
 			}
-		};
+    };
+    console.log("test")
 		window.onresize = () => {
 			return (() => {
 				self.fullWidth.width = (document.documentElement.clientWidth - 516) + "px"
