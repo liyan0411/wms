@@ -126,7 +126,6 @@ export default {
 	},
 	mounted () {
 		var self = this;
-    console.log(000)
 		document.onkeydown = function (e) {
 			var ev = document.all ? window.event : e;
 			if (ev.keyCode == 13) {
