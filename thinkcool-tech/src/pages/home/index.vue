@@ -217,6 +217,7 @@ export default {
     };
   },
   mounted() {
+    console.log(111)
     this.chartmainline()
     this.drawLine()
   },
