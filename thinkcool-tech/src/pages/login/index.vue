@@ -120,7 +120,7 @@ export default {
 			});
 		},
 		forget () {
-			// console.log("忘记密码")
+			console.log("忘记密码")
 		}
 	},
 	mounted () {
