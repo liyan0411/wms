@@ -104,7 +104,6 @@ export default {
 		},
 		loginFun (formName) {
 			let self = this;
-			console.log(self.login)
 			this.$refs[formName].validate((valid) => {
 				if (valid) {
           // self.$api.post("sys/login",{
@@ -121,7 +120,7 @@ export default {
 			});
 		},
 		forget () {
-			console.log("忘记密码")
+			// console.log("忘记密码")
 		}
 	},
 	mounted () {
