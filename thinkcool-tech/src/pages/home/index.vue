@@ -223,12 +223,12 @@ export default {
   methods: {
     // 选择报警通知天数
     handleCommand1(command) {
-      // console.log(command)
+      console.log(command)
       this.warningDayNum = command
     },
     // 选择行业快报天数
     handleCommand2(command) {
-      // console.log(command)
+      console.log(command)
       this.newsDayNum = command
     },
     // 柱状图

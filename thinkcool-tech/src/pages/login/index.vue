@@ -120,7 +120,7 @@ export default {
 			});
 		},
 		forget () {
-			// console.log("忘记密码")
+			console.log("忘记密码")
 		}
 	},
 	mounted () {
@@ -134,7 +134,8 @@ export default {
 				}
 
 			}
-		};
+    };
+    console.log("test")
 		window.onresize = () => {
 			return (() => {
 				self.fullWidth.width = (document.documentElement.clientWidth - 516) + "px"
